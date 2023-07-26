@@ -41,6 +41,7 @@ router
   });
 
 router.route("/sendMessageFcm").post((req, res) => {
+  res.header("Access-Control-Allow-Origin", "*");
   const registrationToken = req.body.token;
   const message = req.body.message;
 
